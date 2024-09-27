@@ -1,3 +1,23 @@
+import requests
+from bs4 import BeautifulSoup
+import socket
+import socks
+
+# Daftar URL sumber proxy
+proxy_sources = [
+    'https://www.free-proxy-list.net/',
+    'https://www.us-proxy.org/',
+    'https://www.proxy-list.download/api/v1/get?type=https',
+    'https://www.sslproxies.org/',
+    'https://www.proxy-list.download/api/v1/get?type=socks4',
+    'https://www.proxy-list.download/api/v1/get?type=socks5',
+    'https://www.proxyscan.io/',
+    'https://www.geonames.org/faq/how-to-find-a-proxy-server.html',
+    'https://www.freeproxy.world/',
+    'https://www.proxynova.com/proxy-server-list/'
+]
+
+
 # Input untuk jenis proxy
 proxy_type = input("Masukkan jenis proxy (http/socks4/socks5, default http): ").lower() or 'http'
 
